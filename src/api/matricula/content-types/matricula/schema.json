@@ -13,6 +13,18 @@
   "attributes": {
     "Fecha": {
       "type": "datetime"
+    },
+    "detalle_matriculas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::detalle-matricula.detalle-matricula",
+      "mappedBy": "matricula"
+    },
+    "estudiante": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::estudiante.estudiante",
+      "mappedBy": "matricula"
     }
   }
 }

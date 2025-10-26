@@ -15,6 +15,17 @@
       "type": "boolean",
       "required": true,
       "default": true
+    },
+    "asignatura": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::asignatura.asignatura"
+    },
+    "matricula": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::matricula.matricula",
+      "inversedBy": "detalle_matriculas"
     }
   }
 }

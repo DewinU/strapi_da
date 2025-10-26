@@ -22,6 +22,12 @@
     "Edad": {
       "type": "integer",
       "required": true
+    },
+    "matricula": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::matricula.matricula",
+      "inversedBy": "estudiante"
     }
   }
 }
